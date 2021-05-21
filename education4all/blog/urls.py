@@ -1,7 +1,6 @@
 """
 Urls of the blog application
 """
-<<<<<<< HEAD
 from blog.views import get_view_factory
 from django.urls import path
 
@@ -17,15 +16,4 @@ urlpatterns = [
     path('algorithms/', algorithms_list.as_view(), name='algorithms'),
     path('mathematics/', mathematics_list.as_view(), name='mathematics'),
     path('<slug:slug>/', post_detail.as_view(), name='post_detail'),
-=======
-from blog.views import (
-    PostList,
-    PostDetail,
-)
-from django.urls import path
-
-urlpatterns = [
-    path('', PostList.as_view(), name='home'),
-    path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
->>>>>>> [feat]: Replacing standalone filer per modules
 ]
