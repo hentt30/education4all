@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "education4all"
+version = "0.0.1"
+description = "blog for a college project"
+authors = ["Henrique <hentt30@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.8.2"
+yapf = "^0.31.0"
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist =  py{36,37,38}
+[testenv]
+commands=
+    pytest
+"""
