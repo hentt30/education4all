@@ -9,7 +9,7 @@ class PostList(generic.ListView):
     """
     Create a list of posts ordered by most recent
     """
-    queryset = PostModel.objects.filter(status=1).order_by('-created_on')
+    queryset = PostModel.objects.filter(status=1).order_by('-created_on')[:10]
     template_name = 'index.html'
 
 
