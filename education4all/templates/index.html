@@ -35,13 +35,16 @@ MathJax = {
                     <span class="subheading">Um lugar onde impulsionamos o conhecimento</span>
                 </div> -->
 
+
             </div>
         </div>
     </div>
 </header>
 <div class="container">
 
+
     <h1 class="postsHeader">Posts mais recentes</h1>
+
 
     <div class="row">
         <!-- Blog Entries Column -->
@@ -52,9 +55,11 @@ MathJax = {
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
 
+
                     <p class="card-text ">{{ post.content | slice:":200" | markdown | safe}}</p>
                     <p class="text-primary">{{ post.get_section_display }}</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Ler mais &rarr;</a>
+
 
                 </div>
             </div>
