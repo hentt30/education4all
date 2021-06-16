@@ -9,8 +9,6 @@ class PostList(generic.ListView):
     """
     Create a list of posts ordered by most recent
     """
-<<<<<<< HEAD
-
     model = get_model_factory('PostsFactory').create()
     queryset = model.objects.filter(status=1).order_by('-created_on')[:10]
     template_name = 'index.html'
@@ -36,9 +34,6 @@ class PostListMathematics(generic.ListView):
                                    
                                     section=0).order_by('-created_on')[:10]
 
-=======
-    queryset = PostModel.objects.filter(status=1).order_by('-created_on')[:10]
->>>>>>> [feat]: Adding new pages
     template_name = 'index.html'
 
 
