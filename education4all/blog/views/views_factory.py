@@ -3,6 +3,7 @@ Implements a factory for view classes
 """
 from abc import ABC, abstractmethod
 from .posts import PostDetail, PostList, PostListAlgorithms, PostListMathematics
+
 from .contact import ContactUs
 
 
@@ -61,7 +62,6 @@ class PostListMathematicsFactory(ViewsFactory):
         return PostListMathematics
 
 
-class ContactFactory(ViewsFactory):
     """
     Generates the object responsible for show contact informations
     """
@@ -88,6 +88,7 @@ def get_view_factory(name):
         'PostsDetailFactory': PostsDetailFactory(),
         'PostListAlgorithmsFactory': PostListAlgorithmsFactory(),
         'PostListMathematicsFactory': PostListMathematicsFactory(),
+
     }
 
     try:
