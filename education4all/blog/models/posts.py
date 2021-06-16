@@ -31,4 +31,7 @@ class PostModel(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title
+        """
+        Returns a char field for the model
+        """
+        return str(self.title)

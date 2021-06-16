@@ -1,5 +1,4 @@
 """
 Init for view modules
 """
-from .posts import PostList, PostDetail
-from .contact import ContactUs
+from .view_factory import get_view_factory
