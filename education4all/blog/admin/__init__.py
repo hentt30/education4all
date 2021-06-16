@@ -7,4 +7,3 @@ from .posts_admin import PostAdmin
 
 # Register your models here.
 admin.site.register(get_model_factory('PostsFactory').create()gir, PostAdmin)
-
