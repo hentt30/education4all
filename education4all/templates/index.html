@@ -1,5 +1,20 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
+{% load markdown_extras %}
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 <style>
     .postsHeader{
         font-size: 2rem;
@@ -32,7 +47,7 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <p class="card-text ">{{ post.content | slice:":200" | markdown | safe}}</p>
                     <p class="text-primary">{{ post.get_section_display }}</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Ler mais &rarr;</a>
                 </div>
