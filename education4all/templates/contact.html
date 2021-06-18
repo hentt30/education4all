@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .postsHeader {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+</style>
+
+<!-- Page header-->
+<header class="Homeheader"
+    style="background-image: url('https://miro.medium.com/max/3840/1*OOWSoWHeQ5kyJ4N0P2ptNA.png')">
+    <div class="container-fluid position-relative px-0 px-lg-0">
+        <div class="row gy-1 gy-lg-1 justify-content-center">
+            <div class="col-md-8 col-lg-8 col-xl-7">
+                <!--<div class="site-heading">
+                    <h1 class="h1HomeHeader">Education4all</h1>
+                    <span class="subheading">Um lugar onde impulsionamos o conhecimento</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-12 col-md-12 col-xl-12  mt-3 px-5 text-center">
+            <h1 class="postsHeader">Tem perguntas? Nós temos respostas</h1>
+            <address>
+                Caso queira nos contatar, utilize esse <a href="mailto:education4all@gmail.com">email</a>
+                para nos contatar sobre qualquer sugestão ou bug reportado.
+            </address>
+            <address>
+                Informamos que não aceitamos sugestões comerciais ou de propagandas, o conteúdo dos emails devem ser
+                extritamente
+                sobre o conteúdo do site. Para dúvidas, utilize a seção de comentários em cada post.
+            </address>
+        </div>
+
+    </div>
+</div>
+{%endblock%}
