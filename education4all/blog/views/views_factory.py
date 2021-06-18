@@ -2,7 +2,7 @@
 Implements a factory for view classes
 """
 from abc import ABC, abstractmethod
-from .posts import PostDetail, PostList
+from .posts import PostDetail, PostList, PostListAlgorithms, PostListMathematics
 from .contact import ContactUs
 
 
@@ -39,6 +39,28 @@ class PostsListFactory(ViewsFactory):
         return PostList
 
 
+class PostListAlgorithmsFactory(ViewsFactory):
+    """
+    Generates the object responsible for list the posts about algorithms
+    """
+    def create(self):
+        """
+        Create the PostList object
+        """
+        return PostListAlgorithms
+
+
+class PostListMathematicsFactory(ViewsFactory):
+    """
+    Generates the object responsible for list the posts about algorithms
+    """
+    def create(self):
+        """
+        Create the PostList object
+        """
+        return PostListMathematics
+
+
 class ContactFactory(ViewsFactory):
     """
     Generates the object responsible for show contact informations
@@ -64,6 +86,8 @@ def get_view_factory(name):
         'ContactFactory': ContactFactory(),
         'PostsListFactory': PostsListFactory(),
         'PostsDetailFactory': PostsDetailFactory(),
+        'PostListAlgorithmsFactory': PostListAlgorithmsFactory(),
+        'PostListMathematicsFactory': PostListMathematicsFactory(),
     }
 
     try:
