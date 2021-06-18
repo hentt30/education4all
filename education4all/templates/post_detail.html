@@ -25,7 +25,6 @@ MathJax = {
         <p class=" text-muted">{{ object.author }} | {{ object.created_on }}</p>
         <p class="card-text ">{{ object.content | markdown | safe }}</p>
         <p class="text-primary">{{ object.get_section_display }}</p>
-
       </div>
     </div>
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
