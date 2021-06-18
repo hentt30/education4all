@@ -9,4 +9,4 @@ register = template.Library()
 @register.filter()
 @stringfilter
 def markdown(value):
-    return md.markdown(value, extensions=['extra'])
+    return md.markdown(value, extensions=['extra', 'smarty'])
