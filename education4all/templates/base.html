@@ -43,6 +43,7 @@
     }
 
 
+
     .Homeheader{
         position: relative;
     margin-bottom: 3rem;
@@ -84,6 +85,7 @@
             color:black;
     
     }
+
 </style>
 
 
@@ -103,15 +105,19 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white; font-weight: bolder;"
                             href="#">Sobre Nós</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white; font-weight: bolder;"
+
                             href="{% url 'algorithms'%}">Algoritmos</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white; font-weight: bolder;"
                             href="{% url 'mathematics'%}">Matemática</a></li>
+                            
+
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white; font-weight: bolder;"
                             href="{% url 'contact'%}">Contato</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
     {% block content %}
     <!-- Content Goes here -->

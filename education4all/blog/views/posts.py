@@ -19,7 +19,9 @@ class PostListAlgorithms(generic.ListView):
     Create a list of posts ordered by most recent
     """
     model = get_model_factory('PostsFactory').create()
-    queryset = model.objects.filter(status=1, section=1).order_by('-created_on')[:10]
+    queryset = model.objects.filter(status=1,
+                                   
+                                    section=1).order_by('-created_on')[:10]
     template_name = 'index.html'
 
 
@@ -28,7 +30,10 @@ class PostListMathematics(generic.ListView):
     Create a list of posts ordered by most recent
     """
     model = get_model_factory('PostsFactory').create()
-    queryset = model.objects.filter(status=1, section=0).order_by('-created_on')[:10]
+    queryset = model.objects.filter(status=1,
+                                   
+                                    section=0).order_by('-created_on')[:10]
+
     template_name = 'index.html'
 
 
