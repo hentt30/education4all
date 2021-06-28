@@ -15,12 +15,10 @@ class PostModel(models.Model):
     (0,"Draft"),
     (1,"Publish")
     )
-
     SECTION = (
         (0, "Matemática"),
-        (1, "Algoritmos")
+        (1, "Algoritmos"),
     )
-
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
