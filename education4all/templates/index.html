@@ -33,8 +33,6 @@ MathJax = {
                     <h1 class="h1HomeHeader">Education4all</h1>
                     <span class="subheading">Um lugar onde impulsionamos o conhecimento</span>
                 </div> -->
-
-
             </div>
         </div>
     </div>
@@ -56,7 +54,6 @@ MathJax = {
                     <p class="card-text ">{{ post.content | slice:":200" | markdown | safe}}</p>
                     <p class="text-primary">{{ post.get_section_display }}</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Ler mais &rarr;</a>
-
 
                 </div>
             </div>

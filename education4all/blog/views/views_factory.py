@@ -61,7 +61,6 @@ class PostListMathematicsFactory(ViewsFactory):
         return PostListMathematics
 
 
-
 class ContactFactory(ViewsFactory):
     """
     Generates the object responsible for show contact informations
@@ -89,7 +88,6 @@ def get_view_factory(name):
         'PostsDetailFactory': PostsDetailFactory(),
         'PostListAlgorithmsFactory': PostListAlgorithmsFactory(),
         'PostListMathematicsFactory': PostListMathematicsFactory(),
-
     }
 
     try:
