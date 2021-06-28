@@ -1,19 +1,19 @@
+name: Deploy
+
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main]
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
 jobs:
-  heroku_git_deploy_job:
-      runs-on: ubuntu-latest
-      name: git-heroku-deploy
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Heroku Django Deploy
-          uses: nyakaz73/heroku-django-deploy@v0.53
-          with: 
-            heroku_app_name : ${{ secrets.HEROKU_APP_NAME }}
-            heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-            heroku_email_address: ${{ secrets.EMAIL }}
-            use_git: true
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+              with: 
+                heroku_app_name : ${{ secrets.HEROKU_APP_NAME }}
+                heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+                heroku_email_address: ${{ secrets.EMAIL }}
