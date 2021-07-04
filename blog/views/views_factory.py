@@ -2,8 +2,10 @@
 Implements a factory for view classes
 """
 from abc import ABC, abstractmethod
+from blog.views.about_us import AboutUs
 from .posts import PostDetail, PostList, PostListAlgorithms, PostListMathematics
 from .contact import ContactUs
+from .about_us import AboutUs
 
 
 class ViewsFactory(ABC):
@@ -72,6 +74,17 @@ class ContactFactory(ViewsFactory):
         return ContactUs
 
 
+class AboutUsFactory(ViewsFactory):
+    """
+    Generates the object responsible for show informations about ourselves
+    """
+    def create(self):
+        """
+        Create the About us object
+        """
+        return AboutUs
+
+
 def get_view_factory(name):
     """
     Get the correspondent view factory:
@@ -88,6 +101,7 @@ def get_view_factory(name):
         'PostsDetailFactory': PostsDetailFactory(),
         'PostListAlgorithmsFactory': PostListAlgorithmsFactory(),
         'PostListMathematicsFactory': PostListMathematicsFactory(),
+        'AboutUsFactory': AboutUsFactory(),
     }
 
     try:

@@ -20,9 +20,8 @@ class PostListAlgorithms(generic.ListView):
     """
     model = get_model_factory('PostsFactory').create()
     queryset = model.objects.filter(status=1,
-                                   
                                     section=1).order_by('-created_on')[:10]
-    template_name = 'index.html'
+    template_name = 'sections.html'
 
 
 class PostListMathematics(generic.ListView):
@@ -31,10 +30,9 @@ class PostListMathematics(generic.ListView):
     """
     model = get_model_factory('PostsFactory').create()
     queryset = model.objects.filter(status=1,
-                                   
                                     section=0).order_by('-created_on')[:10]
 
-    template_name = 'index.html'
+    template_name = 'sections.html'
 
 
 class PostDetail(generic.DetailView):
