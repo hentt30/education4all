@@ -6,7 +6,7 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|
 
 ## Introdução
-Os criadores, enquanto estudam ou buscam qualquer tipo de conhecimento de suas áreas, sempre se deparam com sites com projetos de disseminação do conhecimento como GeeksForGeeks, dessa forma, resolveram fazer uma iniciativa análoga, mas totalmente em portugûes, de brasileiros para brasileiros
+Os criadores, enquanto estudam ou buscam qualquer tipo de conhecimento de suas áreas, sempre se deparam com sites com projetos de disseminação do conhecimento como GeeksForGeeks, dessa forma, resolveram fazer uma iniciativa análoga, mas totalmente em portugûes, de brasileiros para brasileiros.
 
 ## Objetivo
 Nosso principal objetivo é disponibilizar material de alto nível em português para estudantes brasileiros. Nosso site disponibiliza artigos relevantes à duas áreas do conhecimento: Algoritmos e Matemática. A maioria dos artigos trazem explicações de conceitos complexos ou resoluções de problemas populares. A estrutura do site permite a expansão para diversos outros domínios do conhecimento além dos atuais.
